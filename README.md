@@ -39,6 +39,8 @@ You would see some logs now. Ignore them. All you have to do is visit [`localhos
 
 Visit the [login page](http://localhost:8000/login/) and try to login! The preloaded user's email is `person1@org.com` and the password is `placeholder`. You can view this in [user_data.json](https://github.com/rajanteotia/dnd-school-solutions/blob/master/user_data.json). If you enter incorrect details, you will see a [Bootstrap Alert](https://getbootstrap.com/docs/4.0/components/alerts/). To register with an account, visit the [registration page](http://localhost:8000/register).
 
+![login](https://github.com/rajanteotia/dnd-school-solutions/blob/master/pic4.png?raw=true)
+
 ## Register For An Account
 
 Visit the [registration page](http://localhost:8000/register/) and create an account!

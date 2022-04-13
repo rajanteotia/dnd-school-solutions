@@ -9,9 +9,9 @@ def login(request):
     print('Login Page Opened!')
     times += 1
     if request.path == '/login/signin/':
-        report_loc = '../signin/'
+        report_loc = '/dashboard/'
     else:
-        report_loc = 'signin/'
+        report_loc = '/dashboard/'
     return render(request, 'login.html', {'loc': report_loc, 'error': ''})
 
 
@@ -27,16 +27,17 @@ def signin(request):
     print('Read data from JSON')
     global times
     times = times+1
-    if request.path == '/login/signin/':
-        report_loc = '../signin/'
+    if request.path == '/login/dashboard/':
+        report_loc = '/dashboard/'
     else:
-        report_loc = 'signin/'
+        report_loc = '/dashboard/'
     email = request.POST['email']
     password = request.POST['password']
     if email in emails:
         if passwords[emails.index(email)] == password:
             times = 0
             print('Logged in User, returning HTTP response')
+            return render(request, 'dashboard.html', {'loc': report_loc, 'errorclass': 'alert alert-danger', 'error': ''})
             return HttpResponse('You are logged in successfully')
         else:
             print('Email != Password, returning HTTP response')
